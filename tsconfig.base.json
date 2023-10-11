@@ -41,6 +41,9 @@
       ],
       "@testgen-three/data-graphql": [
         "libs/data-graphql/src/index.ts"
+      ],
+      "@testgen-three/data-models": [
+        "libs/data-models/src/index.ts"
       ]
     }
   },
