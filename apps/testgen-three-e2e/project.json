@@ -1,0 +1,29 @@
+{
+  "name": "testgen-three-e2e",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/testgen-three-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nx/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/testgen-three-e2e/cypress.json",
+        "devServerTarget": "testgen-three:serve:development"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "testgen-three:serve:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/testgen-three-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["testgen-three"]
+}
