@@ -38,6 +38,9 @@
       ],
       "@testgen-three/data-services": [
         "libs/data-services/src/index.ts"
+      ],
+      "@testgen-three/data-graphql": [
+        "libs/data-graphql/src/index.ts"
       ]
     }
   },
